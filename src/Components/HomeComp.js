@@ -2,22 +2,26 @@ import React from "react";
 import { Container, Row } from "react-bootstrap";
 import background from './images/HeaderImage.jpg'
 import vector2 from './images/Vector.svg';
-import ordergen from './images/ordergen.svg'
-import demands from './images/demands.svg'
-import delevery from './images/dilevery.svg'
-import badge1 from './images/cil_badge.png'
-import placeholderimg from './images/placeholderimg.jpg'
-import sell from './images/sell 1.png'
-import food from './images/food.png'
-import lightbox from './images/Lightbox.jpg'
-import service from './images/service 1.png'
-import cleaness from './images/cleanliness 1.png'
-import labour from './images/labor dependence 1.png'
-import cost from './images/cost 1.png'
-import frame3 from './images/Frame 3.png'
-import frame4 from './images/Frame 4.png'
-import frame5 from './images/Frame 5.png'
-import frame6 from './images/Frame 6.png'
+import ordergen from './images/ordergen.svg';   
+import demands from './images/demands.svg';
+import delevery from './images/dilevery.svg';
+import badge1 from './images/cil_badge.png';
+import placeholderimg from './images/placeholderimg.jpg';
+import sell from './images/sell 1.png';
+import food from './images/food.png';
+import lightbox from './images/Lightbox.jpg';
+import service from './images/service 1.png';
+import cleaness from './images/cleanliness 1.png';
+import labour from './images/labor dependence 1.png';
+import cost from './images/cost 1.png';
+import frame3 from './images/Frame 3.png';
+import frame4 from './images/Frame 4.png';
+import frame5 from './images/Frame 5.png';
+import frame6 from './images/Frame 6.png';
+import leaves from './images/Leaves.png';
+import placeholderimg2 from './images/placeholderimage2.jpg';
+import mobile from './images/mobile.png'
+import Footer from "./FooterComp";
 
 
 const Home = () =>{
@@ -110,6 +114,7 @@ const Home = () =>{
 
                      {/* For Bussiness section */}
                     <div className="d-flex justify-content-center p-5">
+
                            <img className="mt-5" src={lightbox} alt='light'/>
                            <div className="mx-3">
                              <h2 className="mt-5 pt-5">For Bussiness</h2>
@@ -145,7 +150,7 @@ const Home = () =>{
                     {/* For Bussiness section */}
 
                     {/* Our Partners */}
-                    <div className="">
+                    <div className="pb-5">
                         <h2 className="text-center fw-bold pt-5">Meet Our Partners</h2>
                         <div  style={{gap: '30px', alignSelf: 'center'}} className="justify-content-center d-flex">
                             <img src={frame3} alt='frame'/>
@@ -156,13 +161,45 @@ const Home = () =>{
                     </div>
                      {/* Our Partners */}
 
-                     <div style={{background: '#DAE8E8', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)'}}>
-                     <div style={{justifyContent: 'flex-end'}} className="embed-responsive embed-responsive-16by9">
+                     <div className=" align-items-center" style={{backgroundColor: '#DAE8E8',background:`url ${leaves}` , boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)', display:'flex', position:'relative'}}>
+                       <div style={{position:'absolute',marginLeft:'10%', marginTop:'30px', width:'512px',height:'327px'}} className="bg-light">
+                        <p className="mx-5 fs-5 mt-5" style={{color:'#699698'}}>VIDEO SPOTLIGHT</p>
+                        <p className="mx-5 fw-bold fs-3">Meet the Farmers</p>
+                        <div className="btn bg-success col-4 text-light mx-5">Watch Video</div> 
+                       
+                       </div>
+                     <div style={{marginLeft:'35%', marginTop:'100px', marginBottom:'100px'}} className="embed-responsive embed-responsive-16by9">
                      {/*  eslint-disable-next-line jsx-a11y/iframe-has-title */}
-                     <iframe style={{width: '800px', height: '600px', marginTop:'110px'}} className="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+                     <iframe style={{width:'800px', height:'640px'}} className="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen>
+                    
+                     </iframe>
                     </div>
+                     </div>
+
+                     <div className="d-flex">
+                        <div className="p-2 m-2">
+                        <img className="pt-5" src={placeholderimg2} alt='farm'/>
+                        </div>
+
+                        
+                        <div style={{marginTop:'250px'}} className="col-6">
+                            <h1 className="mx-5">Food safety</h1>
+                            <p className="m-5 text-muted">
+                            At Terralima, we are committed to helping ensure that your food will always be safe to eat. 
+                            Our trusted network of farmers are trained by our extension agents. 
+                            Very strict measures are taken to prevent microbial contamination of fruits and vegetables as they are produced, packed, handled and stored. 
+                            During harvesting and collection, we quality check the produce at the drop-off points to ensure they meet healthy standards. 
+                            All packages are tagged to ensure traceability right from the farm to delivery. 
+                            </p>
+
+                        </div>
 
                      </div>
+                     <div style={{background:` url${mobile}`, backgroundPosition:'right', backgroundRepeat:'no-repeat', backgroundSize:'150px 500px'}}>
+                    
+
+                     </div>
+                     <Footer />
 
                 </Row>
             </Row>
