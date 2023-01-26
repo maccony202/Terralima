@@ -2,9 +2,6 @@ import React from "react";
 import { Container, Row } from "react-bootstrap";
 import background from './images/HeaderImage.jpg'
 import vector2 from './images/Vector.svg';
-import ordergen from './images/ordergen.svg';   
-import demands from './images/demands.svg';
-import delevery from './images/dilevery.svg';
 import badge1 from './images/cil_badge.png';
 import placeholderimg from './images/placeholderimg.jpg';
 import sell from './images/sell 1.png';
@@ -22,6 +19,10 @@ import leaves from './images/Leaves.png';
 import placeholderimg2 from './images/placeholderimage2.jpg';
 import mobile from './images/mobile.png'
 import Footer from "./FooterComp";
+import Threecolprop from "./Threecolprops";
+import ordergen from './images/ordergen.svg'
+import demands from './images/demands.svg';
+import delevery from './images/dilevery.svg'
 
 
 const Home = () =>{
@@ -56,24 +57,23 @@ const Home = () =>{
                         <p className="fs-1 text-center p-5 fw-bold">How TerraLima Works</p>
                         <div className="d-flex justify-content-center mx-5">
 
-                            <div style={{marginLeft: '120px'}} className="">
-                                <img className="px-5" src={ordergen} alt="orger generated"/>
-                                <p className="fs-5 fw-bold p-2">Order Generated</p>
-                                <p className=" p-1 text-muted">We aggregate & secure demand from businesses</p>
+                            <Threecolprop 
+                               img = {ordergen}
+                               title = "Oder Generated"
+                               info = "We aggregate & secure demand from businesses"
+                            />
 
-                            </div>
-                            <div style={{marginLeft: '120px'}}>
-                                <img className="px-5" src={demands} alt="orger generated"/>
-                                <p className="fs-5 fw-bold p-2">On-demand Harvesting</p>
-                                <p className="p-1 text-muted">The fresh produce is harvested & delivered to our nearest drop-off point</p>
+                           <Threecolprop 
+                               img = {demands}
+                               title = "On-demand Harvesting"
+                               info = "The fresh produce is harvested & delivered to our nearest drop-off point"
+                            />
 
-                            </div>
-                            <div style={{marginLeft: '120px'}}>
-                                <img className="px-5" src={delevery} alt="orger generated"/>
-                                <p className="fs-5 fw-bold p-3">Collection, Delivery</p>
-                                <p className="p-1 text-muted">The produce is packaged and delivered in less than 24 hours</p>
-
-                            </div>
+                             <Threecolprop 
+                               img = {delevery}
+                               title = "Collection, Delivery"
+                               info = "The produce is packaged and delivered in less than 24 hours"
+                            />
 
                         </div>
                     </div> 

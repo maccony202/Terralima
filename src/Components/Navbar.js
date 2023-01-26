@@ -21,7 +21,7 @@ const NavigationBar =() => {
             <Nav.Link className='text-dark' as={Link} to="/farmers">Farmers</Nav.Link>
             <Nav.Link className='text-dark' as={Link} to="/bussiness">Bussiness</Nav.Link>
             <NavDropdown title={<span className='text-dark'>Resources<img src={vector1} alt='vec'/></span>} id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Contact Us</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/contact" href="#action/3.1">Contact Us</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Blog
               </NavDropdown.Item>
