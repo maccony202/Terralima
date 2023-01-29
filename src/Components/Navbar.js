@@ -7,6 +7,7 @@ import logo from './images/logo.png'
 import vector1 from './images/Vector1.png'
 import vector from './images/Vector.png'
 import { Link} from 'react-router-dom';
+import smallphone from './images/smallphone.png'
 
 const NavigationBar =() => {
   return (
@@ -21,7 +22,7 @@ const NavigationBar =() => {
             <Nav.Link className='text-dark' as={Link} to="/farmers">Farmers</Nav.Link>
             <Nav.Link className='text-dark' as={Link} to="/bussiness">Bussiness</Nav.Link>
             <NavDropdown title={<span className='text-dark'>Resources<img src={vector1} alt='vec'/></span>} id="collasible-nav-dropdown">
-              <NavDropdown.Item as={Link} to="/contact" href="#action/3.1">Contact Us</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/contact" href="#action/3.1"><span><img src={smallphone} alt='phone'/></span>Contact Us</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Blog
               </NavDropdown.Item>
@@ -29,10 +30,10 @@ const NavigationBar =() => {
           </Nav>
           <Nav>
             <Nav.Link className='text-dark' href="#deets">Buy Fresh Produce</Nav.Link>
-            <Nav.Link className='text-dark' eventKey={2} href="#memes">
+            <Nav.Link className='text-dark' as={Link} to="/partner-login" eventKey={2} href="#memes">
               Partner Login
             </Nav.Link>
-            <Button className='bg-success'>Sign Up<img src={vector} alt='sign'/></Button>
+            <Button className='bg-success' as={Link} to='/signup'>Sign Up<img src={vector} alt='sign'/></Button>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -33,7 +33,7 @@ const ContactUs = () => {
 
           <div className="d-flex justify-content-between m-5 pb-5">
             <div>
-            <div className="d-flex pt-5">
+            <div className="d-flex pt-3">
              <div class="mb-3 mx-3">
                 <label for="formGroupExampleInput" className="form-label px-1">First Name</label>
                 <input type="text" className="form-control" id="formGroupExampleInput"/>

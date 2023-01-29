@@ -55,7 +55,7 @@ const Home = () =>{
                     {/* How TerraLima Works section  */}
                     <div>
                         <p className="fs-1 text-center p-5 fw-bold">How TerraLima Works</p>
-                        <div className="d-flex justify-content-center mx-5">
+                        <div className="d-flex justify-content-center mx-5 px-5">
 
                             <Threecolprop 
                                img = {ordergen}

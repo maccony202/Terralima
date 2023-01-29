@@ -4,8 +4,8 @@ const Threecolprop = (props) =>{
     return(
         <div>
                        
-                            <div style={{marginLeft: '120px'}} className="">
-                                <img className="px-5" src={props.img} alt="orger generated"/>
+                            <div className="justify-content-center mx-5 px-3">
+                                <img className="px-2" src={props.img} alt="orger generated"/>
                                 <p className="fs-5 fw-bold p-2">{props.title}</p>
                                 <p className=" p-1 text-muted">{props.info}</p>
 
