@@ -30,13 +30,13 @@ const Home = () =>{
             <div>
                 <div>
                     <div className="px-5" style={{height: '665px', background: `url(${background})`,backgroundRepeat: 'no-repeat', backgroundPosition: 'right ', backgroundSize: '900px 765px'}}>
-                    <p className="fw-bold" style={{fontSize: '46px', fontfamily: 'Zabal DEMO', paddingTop: '100px'}}>
-                        Getting fresh produce.  
+                    <p className="fw-bold title-header" style={{fontSize: '46px', paddingTop: '100px'}}>
+                        Getting fresh produce. <br/>From farm. <br/>To fork.
                     </p>
-                    <p className=" fw-bold " style={{fontSize: '46px'}}>From farm.</p>
-                    <p className="fw-bold" style={{fontSize: '46px'}}>To fork.</p>
+                    {/* <p className=" fw-bold " style={{fontSize: '46px'}}>From farm.</p>
+                    <p className="fw-bold" style={{fontSize: '46px'}}>To fork.</p> */}
                     <p className="col-3 text-muted">
-                    Buy fresh fruits & Vegetables for your businesses.
+                    Buy fresh fruits & Vegetables<br/> for your businesses.
                     </p>
 
                     {/* find your area */}

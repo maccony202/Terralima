@@ -45,10 +45,20 @@
   color: #008488;
 }
 
-.nav-text-color:active{
-  background-color: #008488;
+.nav-text-color .activeKey{
+  color: #008488;
 }
 
-.sign:hover {
-  background-color: #E8F2F2;
+.title-header{
+line-height: 3rem;
+font-family: ZabalBold;
 }
+
+@font-face {
+  font-family: "ZabalBold";
+  src: url(./fonts/zabal/ZabalDEMO-Bold.otf);
+}
+
+/* .sign:hover {
+  color: ;
+} */
