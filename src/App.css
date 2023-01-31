@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+.nav-text-color {
+  color: #232323;
+}
+
+.nav-text-color:hover {
+  color: #008488;
+}
+
+.nav-text-color:active{
+  background-color: #008488;
+}
+
+.sign:hover {
+  background-color: #E8F2F2;
+}

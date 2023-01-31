@@ -1,3 +1,5 @@
+import React from 'react';
+import '../App.css';
 import { Button } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -12,25 +14,26 @@ import smallphone from './images/smallphone.png'
 const NavigationBar =() => {
   return (
     <>
-     <Navbar collapseOnSelect expand="lg" bg="light" variant="dark">
+     <Navbar collapseOnSelect expand="lg" bg="white" variant="dark">
       <Container>
         <Navbar.Brand as={Link} to="/"><img src={logo} alt='Logo'/></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link className='text-dark' as={Link} to="/">Home</Nav.Link>
-            <Nav.Link className='text-dark' as={Link} to="/farmers">Farmers</Nav.Link>
-            <Nav.Link className='text-dark' as={Link} to="/bussiness">Bussiness</Nav.Link>
-            <NavDropdown title={<span className='text-dark'>Resources<img src={vector1} alt='vec'/></span>} id="collasible-nav-dropdown">
-              <NavDropdown.Item as={Link} to="/contact" href="#action/3.1"><span><img src={smallphone} alt='phone'/></span>Contact Us</NavDropdown.Item>
+            <Nav.Link className='nav-text-color' as={Link} to="/" activeKey='/'>Home</Nav.Link>
+            <Nav.Link className='nav-text-color' as={Link} to="/farmers">Farmers</Nav.Link>
+            <Nav.Link className='nav-text-color' as={Link} to="/bussiness">Bussiness</Nav.Link>
+            <NavDropdown title={<span className='nav-text-color'>Resources<img style={{marginLeft: '9px'}} src={vector1} alt='vec'/></span>} id="collasible-nav-dropdown">
+              <NavDropdown.Item as={Link} to="/contact" href="#action/3.1"><span><img style={{marginRight: '15px'}} src={smallphone} alt='phone'/></span>Contact Us</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Blog
               </NavDropdown.Item>
+              
             </NavDropdown>
           </Nav>
           <Nav>
-            <Nav.Link className='text-dark' href="#deets">Buy Fresh Produce</Nav.Link>
-            <Nav.Link className='text-dark' as={Link} to="/partner-login" eventKey={2} href="#memes">
+            <Nav.Link className='nav-text-color' href="#deets">Buy Fresh Produce</Nav.Link>
+            <Nav.Link className='nav-text-color' as={Link} to="/partner-login" eventKey={2} href="#memes">
               Partner Login
             </Nav.Link>
             <Button className='bg-success' as={Link} to='/signup'>Sign Up<img src={vector} alt='sign'/></Button>

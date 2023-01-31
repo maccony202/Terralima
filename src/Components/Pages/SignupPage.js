@@ -8,11 +8,11 @@ import Footer from "../FooterComp";
 const SignUp = () => {
     return(
       <div>
-        <div className="d-flex justify-content-between m-5">
+        <div className="d-flex justify-content-evenly">
             <div>
-               <h2 className="text-center pt-5 mt-5">Choose an Accont type</h2>
-               <div className="d-flex justify-content-between mt-5 pt-5">
-                <Card className="mx-2">
+               <h2 style={{paddingTop: '100px'}} className="text-center">Choose an Accont type</h2>
+               <div style={{paddingTop: '34px'}} className="d-flex justify-content-between ">
+                <Card className="mx-2 sign">
                     <img className="p-3" src={farmeracc} alt='farmer'/>
                     <p className="text-center fw-bold">Farmer</p>
                     <div className="d-flex justify-content-center pt-4">
@@ -20,7 +20,7 @@ const SignUp = () => {
                     </div>
 
                 </Card>
-                <Card className="mx-2">
+                <Card className="mx-2 sign">
                     <img className="p-3" src={consumeracc} alt='consumer'/>
                     <p className="text-center fw-bold px-2">Bussiness / Consumer</p>
                     <div className="d-flex justify-content-center pb-4">
@@ -30,7 +30,7 @@ const SignUp = () => {
                </div>
             </div>
             <div>
-                <img src={placeholderimg5} alt='placeholder'/>
+                <img style={{height: '600px'}} src={placeholderimg5} alt='placeholder'/>
             </div>
         </div>
         <Footer />

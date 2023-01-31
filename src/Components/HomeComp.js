@@ -1,5 +1,4 @@
 import React from "react";
-import { Container, Row } from "react-bootstrap";
 import background from './images/HeaderImage.jpg'
 import vector2 from './images/Vector.svg';
 import badge1 from './images/cil_badge.png';
@@ -27,14 +26,15 @@ import delevery from './images/dilevery.svg'
 
 const Home = () =>{
     return(
-        <Container className="p-0" fluid>
-            <Row>
-                <Row>
+        <div>
+            <div>
+                <div>
                     <div className="px-5" style={{height: '665px', background: `url(${background})`,backgroundRepeat: 'no-repeat', backgroundPosition: 'right ', backgroundSize: '900px 765px'}}>
-                    <p className="" style={{fontSize: '36px', fontfamily: 'Zabal DEMO', paddingTop: '100px'}}>
+                    <p className="fw-bold" style={{fontSize: '46px', fontfamily: 'Zabal DEMO', paddingTop: '100px'}}>
                         Getting fresh produce.  
                     </p>
-                    <p className="text-break col-2" style={{fontSize: '36px'}}>From farm. To fork.</p>
+                    <p className=" fw-bold " style={{fontSize: '46px'}}>From farm.</p>
+                    <p className="fw-bold" style={{fontSize: '46px'}}>To fork.</p>
                     <p className="col-3 text-muted">
                     Buy fresh fruits & Vegetables for your businesses.
                     </p>
@@ -43,37 +43,43 @@ const Home = () =>{
                     <div className="d-flex">
                         <div class="form-group d-flex">
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="find your area"/>
+                        <input type="text" class="form-control" placeholder="find your area"></input>
                         </div>
                         <div className="btn bg-success col-5 mx-2 text-light p-2">Find produce</div>
                         </div>
                     </div>
                     {/* find your area */}
-                    <p className="pt-5"><a className="text-decoration-none" href="/">Already have an account?<span className="text-success mx-2">Sign In<img style={{width: '10px', height: '12px'}} className="mx-2" src={vector2} alt='vec2'/></span></a></p>
+                    <p className="pt-5"><a className="text-decoration-none nav-text-color" href="/">Already have an account?<span className="text-success mx-2">Sign In<img style={{width: '10px', height: '12px'}} className="mx-2" src={vector2} alt='vec2'/></span></a></p>
                     </div>
 
                     {/* How TerraLima Works section  */}
                     <div>
-                        <p className="fs-1 text-center p-5 fw-bold">How TerraLima Works</p>
-                        <div className="d-flex justify-content-center mx-5 px-5">
-
+                        <p className="fs-1 text-center fw-bold">How TerraLima Works</p>
+                        <div style={{display: "flex", alignItems: 'center'}} className="">
+                            <div className="col-4">
                             <Threecolprop 
                                img = {ordergen}
                                title = "Oder Generated"
                                info = "We aggregate & secure demand from businesses"
                             />
-
+                            </div>
+                           
+                           <div className="col-4">
                            <Threecolprop 
                                img = {demands}
                                title = "On-demand Harvesting"
                                info = "The fresh produce is harvested & delivered to our nearest drop-off point"
                             />
-
-                             <Threecolprop 
+                           </div>
+                         
+                            <div className="col-4">
+                            <Threecolprop 
                                img = {delevery}
                                title = "Collection, Delivery"
                                info = "The produce is packaged and delivered in less than 24 hours"
                             />
+                            </div>
+                            
 
                         </div>
                     </div> 
@@ -81,7 +87,7 @@ const Home = () =>{
 
                     <div style={{backgroundColor: '#E8F2F2'}}>
                         <p className="fs-1 fw-bold text-center pt-5">Why use TerraLima?</p>
-                        <p className="text-center p-5 text-muted fs-4">
+                        <p className="text-center p-5 text-muted ">
                         Our mission is to increase the income of farmers by streamlining the agricultural supply chain. 
                         Terralima helps farmers access extension services, 
                         financial services and fair produce prices.
@@ -90,7 +96,7 @@ const Home = () =>{
 
                     {/* for Farmers section */}
                     <div className="d-flex justify-content-center">
-                          <div className="mx-5">
+                          <div style={{margin: '50px 0px 0px 54px'}} className="">
                           <p className="fs-2 fw-bold pt-5 mt-5">For Farmers</p>
                             <div>
                             <img src={badge1} alt="src"/>
@@ -108,15 +114,15 @@ const Home = () =>{
                             <p className="text-muted">Inefficiences within the supply chain lead to dangerous levels of chemicals applied to the produce along the intermediary chain.</p>
                             </div>
                           </div>
-                          <img className="pt-5 mx-5" src={placeholderimg} alt='placeholder'/>
+                          <img style={{height:'700px'}} className="pt-5 mx-5" src={placeholderimg} alt='placeholder'/>
                     </div>
                     {/* For farmer section */}
 
                      {/* For Bussiness section */}
-                    <div className="d-flex justify-content-center p-5">
+                    <div className="d-flex justify-content-evenly">
 
-                           <img className="mt-5" src={lightbox} alt='light'/>
-                           <div className="mx-3">
+                           <img style={{height:'600px'}} className="" src={lightbox} alt='light'/>
+                           <div className="">
                              <h2 className="mt-5 pt-5">For Bussiness</h2>
                              
                             <div className="d-flex pt-5">
@@ -201,10 +207,10 @@ const Home = () =>{
                      </div>
                      <Footer />
 
-                </Row>
-            </Row>
+                </div>
+            </div>
 
-        </Container>
+        </div>
     )
 }
 
