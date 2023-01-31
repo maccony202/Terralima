@@ -95,7 +95,7 @@ const Home = () =>{
                     </div>
 
                     {/* for Farmers section */}
-                    <div className="d-flex justify-content-center">
+                    <div style={{margin: '5%'}} className="d-flex justify-content-center">
                           <div style={{margin: '50px 0px 0px 54px'}} className="">
                           <p className="fs-2 fw-bold pt-5 mt-5">For Farmers</p>
                             <div>
@@ -119,7 +119,7 @@ const Home = () =>{
                     {/* For farmer section */}
 
                      {/* For Bussiness section */}
-                    <div className="d-flex justify-content-evenly">
+                    <div style={{gap: '20px', margin: '5%'}} className="d-flex justify-content-evenly">
 
                            <img style={{height:'600px'}} className="" src={lightbox} alt='light'/>
                            <div className="">
@@ -182,9 +182,9 @@ const Home = () =>{
                     </div>
                      </div>
 
-                     <div className="d-flex">
-                        <div className="p-2 m-2">
-                        <img className="pt-5" src={placeholderimg2} alt='farm'/>
+                     <div style={{margin: '5%'}} className="d-flex justify-content-evenly">
+                        <div className="">
+                        <img className="" src={placeholderimg2} alt='farm'/>
                         </div>
 
                         

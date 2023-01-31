@@ -8,9 +8,9 @@ import Footer from "../FooterComp";
 const SignUp = () => {
     return(
       <div>
-        <div className="d-flex justify-content-evenly">
-            <div>
-               <h2 style={{paddingTop: '100px'}} className="text-center">Choose an Accont type</h2>
+        <div className="d-flex justify-content-between">
+            <div style={{marginLeft:'12%'}}>
+               <h2 style={{paddingTop: '100px', width:'300px', marginLeft:'10%'}} className="text-center">Choose an Accont type</h2>
                <div style={{paddingTop: '34px'}} className="d-flex justify-content-between ">
                 <Card className="mx-2 sign">
                     <img className="p-3" src={farmeracc} alt='farmer'/>
