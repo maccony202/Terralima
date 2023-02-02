@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useState, useEffect} from "react";
 import background from './images/HeaderImage.jpg'
 import vector2 from './images/Vector.svg';
 import badge1 from './images/cil_badge.png';
@@ -28,6 +28,14 @@ import modalimg from './images/modalimg.png'
 
 const Home = () =>{
     const [isOpen, setIsOpen] = useState(false);
+
+    useEffect(() => {
+        if (isOpen) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = '';
+        }
+      }, [isOpen]);
     return(
         <div>
             <div>
@@ -50,11 +58,15 @@ const Home = () =>{
                         </div>
                         <div onClick={() => setIsOpen(true)} className="btn bg-success col-5 mx-2 text-light p-2">Find produce</div>
                         {isOpen &&(
-                            <div className="my-modal">
+                            <div className="my-modal pb-5">
                             <button onClick={() => setIsOpen(false)}>close</button>
-                            <p className="p-5">Yes, we deliver in your city! </p>
-                            <input type='text'></input>
-                            <img src={modalimg} alt='modal'/>
+                            <div className="modal-content w-100">
+                            <p style={{fontFamily: 'ZabalBold', fontSize: '36px', lineHeight: '36px',padding:'24px 16px 0px 16px'}} className="text-center text-success">Yes, we deliver in your city! </p>
+                            <img style={{width:'180px', height:'150px', alignSelf:'center'}} src={modalimg} alt='modal'/>
+                            <p className="text-center fw-bold pt-3">Explore fresh fruits & vegetables</p>
+                            <p className="text-center">We deliver under 24 hours!<br/>Delivery is <span className="text-warning">free</span> or businesses.</p>
+                            <button className="bg-success w-25 text-white d-flex align-self-center justify-content-center p-2 rounded">Continue</button>
+                            </div>
                            </div>
                         )}
                         </div>
