@@ -10,6 +10,7 @@ import vector1 from './images/Vector1.png'
 import vector from './images/Vector.png'
 import { Link} from 'react-router-dom';
 import smallphone from './images/smallphone.png'
+import blog from './images/carbon_blog.png'
 
 const NavigationBar =() => {
   return (
@@ -25,7 +26,7 @@ const NavigationBar =() => {
             <Nav.Link className='nav-text-color  text-dark' as={Link} to="/bussiness">Bussiness</Nav.Link>
             <NavDropdown title={<span className='nav-text-color  text-dark'>Resources<img style={{marginLeft: '9px'}} src={vector1} alt='vec'/></span>} id="collasible-nav-dropdown">
               <NavDropdown.Item as={Link} to="/contact" href="#action/3.1"><span><img style={{marginRight: '15px'}} src={smallphone} alt='phone'/></span>Contact Us</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
+              <NavDropdown.Item as={Link} to="/" href="#action/3.2"><span><img style={{marginRight: '15px'}} src={blog} alt='blog'/></span>
                 Blog
               </NavDropdown.Item>
               

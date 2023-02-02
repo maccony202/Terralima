@@ -8,7 +8,7 @@ import twitter from './images/Twitter.png'
 const Footer = () => {
     return (
         <>
-        <Row className="m-5" lg={12}>
+        <Row className="m-5" sm={1} md={4} lg={12}>
             <div className="col-3">
                 <img src={logo}  alt='logo'/>
                 <p>Fresh fruits & Vegetables Form Farm To Fork</p>

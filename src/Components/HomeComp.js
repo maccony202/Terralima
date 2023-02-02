@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import background from './images/HeaderImage.jpg'
 import vector2 from './images/Vector.svg';
 import badge1 from './images/cil_badge.png';
@@ -16,15 +16,18 @@ import frame5 from './images/Frame 5.png';
 import frame6 from './images/Frame 6.png';
 import leaves from './images/Leaves.png';
 import placeholderimg2 from './images/placeholderimage2.jpg';
-import mobile from './images/mobile.png'
 import Footer from "./FooterComp";
 import Threecolprop from "./Threecolprops";
 import ordergen from './images/ordergen.svg'
 import demands from './images/demands.svg';
 import delevery from './images/dilevery.svg'
+import comingsoon from './images/comingsoon.png'
+import modalimg from './images/modalimg.png'
+
 
 
 const Home = () =>{
+    const [isOpen, setIsOpen] = useState(false);
     return(
         <div>
             <div>
@@ -45,7 +48,15 @@ const Home = () =>{
                         <div class="input-group">
                         <input type="text" class="form-control" placeholder="find your area"></input>
                         </div>
-                        <div className="btn bg-success col-5 mx-2 text-light p-2">Find produce</div>
+                        <div onClick={() => setIsOpen(true)} className="btn bg-success col-5 mx-2 text-light p-2">Find produce</div>
+                        {isOpen &&(
+                            <div className="my-modal">
+                            <button onClick={() => setIsOpen(false)}>close</button>
+                            <p className="p-5">Yes, we deliver in your city! </p>
+                            <input type='text'></input>
+                            <img src={modalimg} alt='modal'/>
+                           </div>
+                        )}
                         </div>
                     </div>
                     {/* find your area */}
@@ -54,7 +65,7 @@ const Home = () =>{
 
                     {/* How TerraLima Works section  */}
                     <div>
-                        <p className="fs-1 text-center fw-bold">How TerraLima Works</p>
+                        <p style={{fontFamily:'ZabalBold'}} className="fs-1 text-center fw-bold">How TerraLima Works</p>
                         <div style={{display: "flex", alignItems: 'center'}} className="">
                             <div className="col-4">
                             <Threecolprop 
@@ -86,7 +97,7 @@ const Home = () =>{
                     {/* How TerraLima Works section */}
 
                     <div style={{backgroundColor: '#E8F2F2'}}>
-                        <p className="fs-1 fw-bold text-center pt-5">Why use TerraLima?</p>
+                        <p style={{fontFamily:'ZabalBold'}} className="fs-1 fw-bold text-center pt-5 ">Why use TerraLima?</p>
                         <p className="text-center p-5 text-muted ">
                         Our mission is to increase the income of farmers by streamlining the agricultural supply chain. 
                         Terralima helps farmers access extension services, 
@@ -97,7 +108,7 @@ const Home = () =>{
                     {/* for Farmers section */}
                     <div style={{margin: '5%'}} className="d-flex justify-content-center">
                           <div style={{margin: '50px 0px 0px 54px'}} className="">
-                          <p className="fs-2 fw-bold pt-5 mt-5">For Farmers</p>
+                          <p style={{fontFamily:'ZabalBold'}} className="fs-2 fw-bold pt-5 mt-5">For Farmers</p>
                             <div>
                             <img src={badge1} alt="src"/>
                             <p className=" pt-2 fw-bold">Fair Minimun Guaranteed Price Offer</p>
@@ -123,7 +134,7 @@ const Home = () =>{
 
                            <img style={{height:'600px'}} className="" src={lightbox} alt='light'/>
                            <div className="">
-                             <h2 className="mt-5 pt-5">For Bussiness</h2>
+                             <h2 style={{fonFamily:'ZabalBold'}} className="mt-5 pt-5 fw-bold">For Bussiness</h2>
                              
                             <div className="d-flex pt-5">
                             <div>
@@ -201,9 +212,8 @@ const Home = () =>{
                         </div>
 
                      </div>
-                     <div style={{background:` url${mobile}`, backgroundPosition:'right', backgroundRepeat:'no-repeat', backgroundSize:'150px 500px'}}>
-                    
-
+                     <div>
+                     <img style={{width: '100%'}} src={comingsoon} alt="coming soon"/>
                      </div>
                      <Footer />
 

@@ -46,7 +46,7 @@
 }
 
 .nav-text-color .activeKey{
-  color: #008488;
+  color: #008488 !important;
 }
 
 .title-header{
@@ -57,8 +57,19 @@ font-family: ZabalBold;
 @font-face {
   font-family: "ZabalBold";
   src: url(./fonts/zabal/ZabalDEMO-Bold.otf);
+  font-family: "ZabalLight";
+  src: url(./fonts/zabal/ZabalDEMO-ExtraLight.otf);
 }
 
-/* .sign:hover {
-  color: ;
-} */
+ .sign:hover {
+  background-color: #E8F2F2;
+} 
+
+.my-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border: 1px solid black;
+}
